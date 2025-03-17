@@ -39,12 +39,13 @@ const Popup = ({ setIsOpen }) => {
       category: value,
     }));
   };
+  const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ submitting: true, submitted: false, error: null });
 
     try {
-      const response = await fetch("http://localhost:8000/sendEmail", {
+      const response = await fetch(`${API_URL}/sendEmail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
