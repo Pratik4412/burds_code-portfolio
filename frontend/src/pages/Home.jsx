@@ -16,7 +16,7 @@ import FaqSection from "../components/FaqSection";
 import { testimunials } from "../store/store";
 import Rating from "@mui/material/Rating";
 import Popup from "@/components/Popup";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";        
 
 const Home = () => {
   const [isOpen, setIsOpen] = useOutletContext();
@@ -25,10 +25,13 @@ const Home = () => {
       <div className="main_hero_section">
         <div className="hero_section">
           <div className="heading_sectin">
-            <h1>
+            <h1 className="hidden sm:block">
               Premium UI/UX & Web <br />
               Development to Elevate <br />
               Your Brand
+            </h1>
+            <h1 className="block sm:hidden">
+              Premium UI/UX & Web Development to Elevate Your Brand
             </h1>
             <p>
               We design & develop modern, high-performing websites <br />& apps
@@ -141,9 +144,10 @@ const Home = () => {
                 <span>Portfolio</span>
               </div>
             </div>
-            <h1>
-              Latest Work <br /> Samples
-            </h1>
+            <div className="third_headng">
+              <h1>Latest Work</h1>
+              <h1> Samples</h1>
+            </div>
             <p>
               Delivering high-quality, on-demand designs with precision.
               <br /> Elevate your brand effortlessly, one snap at a time.
@@ -195,9 +199,10 @@ const Home = () => {
               <span>Trust & Credibility</span>
             </div>
             <div className="why_text_section">
-              <h1>
-                Why Choose <br /> Us?
-              </h1>
+              <div className="third_headng">
+                <h1> Why Choose</h1>
+                <h1> Us?</h1>
+              </div>
               <p>
                 We make it easy to bring your ideas to life, guiding you from
                 concept to a fully launched product.

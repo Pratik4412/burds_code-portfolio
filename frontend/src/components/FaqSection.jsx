@@ -69,7 +69,7 @@ const FaqSection = () => {
                   className="faq-question"
                   onClick={() => toggleFaq(index)}
                 >
-                  <span>{faq.question}</span>
+                  <span className="text-start">{faq.question}</span>
                 </button>
                 <div
                   className={`transition-all duration-300 ease-in-out ${
